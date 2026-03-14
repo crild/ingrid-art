@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="base-path" content=".">
+  <title>Contact — Ingrid Amuri Rutherford | Son, Vestby, Norway</title>
+  <meta name="description" content="Get in touch with Ingrid Amuri Rutherford for commissions, course bookings, and art inquiries. Based in Son, Vestby, Norway.">
+  <meta name="keywords" content="contact, art commission, course booking, Ingrid Rutherford, Son, Vestby, Norway">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="navbar" class="scrolled">
+    <a href="index.html" class="nav-logo" style="color:var(--text)">Ingrid Amuri Rutherford</a>
+    <div class="nav-center">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+        <li><a href="about.html" data-i18n="nav.about">About</a></li>
+        <li><a href="courses.html" data-i18n="nav.courses">Courses & Events</a></li>
+        <li><a href="shop.html" data-i18n="nav.shop">Shop</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang="no" title="Norsk"><img src="assets/flags/no.svg" alt="Norsk"></button>
+        <button class="lang-btn" data-lang="en" title="English"><img src="assets/flags/en.svg" alt="English"></button>
+      </div>
+    </div>
+    <button class="nav-menu-btn" id="menu-btn">&#9776;</button>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <h1 data-i18n="contact.title">Get in Touch</h1>
+    <p data-i18n="contact.subtitle">Interested in a piece or want to discuss a commission? Reach out through the form or channels below.</p>
+  </div>
+
+  <!-- Contact Section -->
+  <section>
+    <div class="contact-grid">
+
+      <!-- Contact Form -->
+      <div class="contact-form fade-in">
+        <form id="contact-form" onsubmit="return handleContactForm(event)">
+          <label for="name" data-i18n="contact.form.name">Name</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email" data-i18n="contact.form.email">Email</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="subject" data-i18n="contact.form.subject">Subject</label>
+          <select id="subject" name="subject">
+            <option value="general" data-i18n="contact.form.subject.general">General inquiry</option>
+            <option value="commission" data-i18n="contact.form.subject.commission">Commission</option>
+            <option value="course" data-i18n="contact.form.subject.course">Course booking</option>
+            <option value="purchase" data-i18n="contact.form.subject.purchase">Purchase</option>
+          </select>
+
+          <label for="message" data-i18n="contact.form.message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit" class="btn btn-primary" data-i18n="contact.form.send">Send message</button>
+        </form>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="contact-sidebar fade-in">
+        <h3 data-i18n="contact.info.title">Contact Information</h3>
+        <p data-i18n="contact.info.location">Son, Vestby, Norway</p>
+
+        <div class="contact-links">
+          <a href="https://www.facebook.com/ingrid.rutherford.10/" target="_blank" class="contact-link">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            Facebook
+          </a>
+          <a href="https://www.instagram.com/ingrid_rutherford/" target="_blank" class="contact-link">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            Instagram
+          </a>
+          <a href="https://www.vestbykunstforening.no/author/ingridr/" target="_blank" class="contact-link">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Vestby Kunstforening
+          </a>
+          <a href="https://www.paintandfun.no/" target="_blank" class="contact-link">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Paint &amp; Fun Norway
+          </a>
+        </div>
+
+        <!-- Map -->
+        <div class="map-container">
+          <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=10.6%2C59.5%2C10.75%2C59.55&layer=mapnik&marker=59.527%2C10.685" allowfullscreen loading="lazy" title="Map of Son, Vestby, Norway"></iframe>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-social">
+      <a href="https://www.facebook.com/ingrid.rutherford.10/" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      <a href="https://www.instagram.com/ingrid_rutherford/" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+    </div>
+    <p><span data-i18n="footer.rights">&copy; 2026 Ingrid Amuri Rutherford. All rights reserved.</span> <span data-i18n="footer.location">Based in Son, Vestby, Norway.</span></p>
+  </footer>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    function handleContactForm(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value;
+      const mailSubject = encodeURIComponent(subject + ' — from ' + name);
+      const mailBody = encodeURIComponent('From: ' + name + ' (' + email + ')\n\n' + message);
+      window.location.href = 'mailto:ingrid@paintandfun.no?subject=' + mailSubject + '&body=' + mailBody;
+      return false;
+    }
+  </script>
+</body>
+</html>

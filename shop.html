@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="base-path" content=".">
+  <title>Shop — Original Art & Prints | Ingrid Amuri Rutherford</title>
+  <meta name="description" content="Shop original art and fine art prints by Ingrid Amuri Rutherford. Paintings, giclée prints, and commissions available from Son, Vestby, Norway.">
+  <meta name="keywords" content="buy art, original paintings, art prints, giclée, Norwegian art, Ingrid Rutherford">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="navbar" class="scrolled">
+    <a href="index.html" class="nav-logo" style="color:var(--text)">Ingrid Amuri Rutherford</a>
+    <div class="nav-center">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+        <li><a href="about.html" data-i18n="nav.about">About</a></li>
+        <li><a href="courses.html" data-i18n="nav.courses">Courses & Events</a></li>
+        <li><a href="shop.html" data-i18n="nav.shop">Shop</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang="no" title="Norsk"><img src="assets/flags/no.svg" alt="Norsk"></button>
+        <button class="lang-btn" data-lang="en" title="English"><img src="assets/flags/en.svg" alt="English"></button>
+      </div>
+    </div>
+    <button class="nav-menu-btn" id="menu-btn">&#9776;</button>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <h1 data-i18n="shop.title">Shop</h1>
+    <p data-i18n="shop.subtitle">Original art and prints available for purchase.</p>
+  </div>
+
+  <!-- Shop Section -->
+  <section>
+    <!-- Shop Controls -->
+    <div class="shop-controls">
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all" data-i18n="shop.filter.all">All</button>
+        <button class="filter-btn" data-filter="originals" data-i18n="shop.filter.originals">Originals</button>
+        <button class="filter-btn" data-filter="prints" data-i18n="shop.filter.prints">Prints</button>
+      </div>
+      <select id="shop-sort">
+        <option value="newest" data-i18n="shop.sort.newest">Newest</option>
+        <option value="price_asc" data-i18n="shop.sort.price_asc">Price: low to high</option>
+        <option value="price_desc" data-i18n="shop.sort.price_desc">Price: high to low</option>
+      </select>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="product-grid" id="product-grid">
+
+      <!-- Product 1: Morning Light -->
+      <div class="product-card fade-in" data-category="originals" data-price="4500">
+        <div class="product-card-img">
+          <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=600&q=80" alt="Morning Light" loading="lazy">
+        </div>
+        <div class="product-card-body">
+          <h3>Morning Light</h3>
+          <p class="meta">Acrylic on canvas, 60x80cm &mdash; Original</p>
+          <p class="price">NOK 4,500</p>
+          <a href="contact.html" class="btn btn-primary btn-sm" data-i18n="shop.inquire">Inquire</a>
+        </div>
+      </div>
+
+      <!-- Product 2: Coastal Reflections -->
+      <div class="product-card fade-in" data-category="originals" data-price="5200">
+        <div class="product-card-img">
+          <img src="https://images.unsplash.com/photo-1549887534-1541e9326642?w=600&q=80" alt="Coastal Reflections" loading="lazy">
+        </div>
+        <div class="product-card-body">
+          <h3>Coastal Reflections</h3>
+          <p class="meta">Oil on canvas, 50x70cm &mdash; Original</p>
+          <p class="price">NOK 5,200</p>
+          <a href="contact.html" class="btn btn-primary btn-sm" data-i18n="shop.inquire">Inquire</a>
+        </div>
+      </div>
+
+      <!-- Product 3: Nordic Bloom -->
+      <div class="product-card fade-in" data-category="originals" data-price="2500">
+        <div class="product-card-img">
+          <img src="https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?w=600&q=80" alt="Nordic Bloom" loading="lazy">
+        </div>
+        <div class="product-card-body">
+          <h3>Nordic Bloom</h3>
+          <p class="meta">Watercolor, 30x40cm &mdash; Original</p>
+          <p class="price">NOK 2,500</p>
+          <a href="contact.html" class="btn btn-primary btn-sm" data-i18n="shop.inquire">Inquire</a>
+        </div>
+      </div>
+
+      <!-- Product 4: Morning Light (Print) -->
+      <div class="product-card fade-in" data-category="prints" data-price="850">
+        <div class="product-card-img">
+          <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=600&q=80" alt="Morning Light (Print)" loading="lazy">
+        </div>
+        <div class="product-card-body">
+          <h3>Morning Light (Print)</h3>
+          <p class="meta">Gicl&eacute;e print, 40x50cm &mdash; Print</p>
+          <p class="price">NOK 850</p>
+          <a href="contact.html" class="btn btn-secondary btn-sm" data-i18n="shop.add_cart">Add to cart</a>
+        </div>
+      </div>
+
+      <!-- Product 5: Fjord Sunset (Print) -->
+      <div class="product-card fade-in" data-category="prints" data-price="950">
+        <div class="product-card-img">
+          <img src="https://images.unsplash.com/photo-1482160549825-59d1b23cb208?w=600&q=80" alt="Fjord Sunset (Print)" loading="lazy">
+        </div>
+        <div class="product-card-body">
+          <h3>Fjord Sunset (Print)</h3>
+          <p class="meta">Gicl&eacute;e print, 40x60cm &mdash; Print</p>
+          <p class="price">NOK 950</p>
+          <a href="contact.html" class="btn btn-secondary btn-sm" data-i18n="shop.add_cart">Add to cart</a>
+        </div>
+      </div>
+
+      <!-- Product 6: Abstract Seasons -->
+      <div class="product-card fade-in" data-category="originals" data-price="6000">
+        <div class="product-card-img">
+          <img src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=600&q=80" alt="Abstract Seasons" loading="lazy">
+        </div>
+        <div class="product-card-body">
+          <h3>Abstract Seasons</h3>
+          <p class="meta">Acrylic on canvas, 70x100cm &mdash; Original</p>
+          <p class="price">NOK 6,000</p>
+          <a href="contact.html" class="btn btn-primary btn-sm" data-i18n="shop.inquire">Inquire</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-social">
+      <a href="https://www.facebook.com/ingrid.rutherford.10/" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      <a href="https://www.instagram.com/ingrid_rutherford/" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+    </div>
+    <p><span data-i18n="footer.rights">&copy; 2026 Ingrid Amuri Rutherford. All rights reserved.</span> <span data-i18n="footer.location">Based in Son, Vestby, Norway.</span></p>
+  </footer>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // ── Shop filtering & sorting ──
+    (function() {
+      const grid = document.getElementById('product-grid');
+      const filterBtns = document.querySelectorAll('.shop-controls .filter-btn');
+      const sortSelect = document.getElementById('shop-sort');
+      if (!grid) return;
+
+      let currentFilter = 'all';
+
+      function getCards() {
+        return Array.from(grid.querySelectorAll('.product-card'));
+      }
+
+      function applyFilter() {
+        getCards().forEach(card => {
+          if (currentFilter === 'all' || card.dataset.category === currentFilter) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+
+      function applySort(type) {
+        const cards = getCards();
+        cards.sort((a, b) => {
+          const priceA = parseInt(a.dataset.price, 10);
+          const priceB = parseInt(b.dataset.price, 10);
+          if (type === 'price_asc') return priceA - priceB;
+          if (type === 'price_desc') return priceB - priceA;
+          return 0;
+        });
+        cards.forEach(card => grid.appendChild(card));
+      }
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentFilter = btn.dataset.filter;
+          applyFilter();
+        });
+      });
+
+      if (sortSelect) {
+        sortSelect.addEventListener('change', () => {
+          applySort(sortSelect.value);
+          applyFilter();
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

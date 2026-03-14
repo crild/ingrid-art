@@ -1,0 +1,98 @@
+{
+  "home": {
+    "no": {
+      "title": "Paint & Fun Norway — Ingrid Amuri Rutherford | Kunstner & Instruktør",
+      "description": "Visuell kunstner og instruktør basert i Son, Vestby. Original kunst, trykk, kreative kurs og arrangementer med Paint & Fun Norway.",
+      "og_title": "Paint & Fun Norway — Ingrid Amuri Rutherford",
+      "og_description": "Visuell kunstner, grafisk designer og kunstinstruktør. Original kunst, trykk og kreative kurs i Son, Vestby, Norge.",
+      "og_type": "website"
+    },
+    "en": {
+      "title": "Paint & Fun Norway — Ingrid Amuri Rutherford | Visual Artist & Instructor",
+      "description": "Visual artist and instructor based in Son, Vestby, Norway. Original art, prints, creative courses and events with Paint & Fun Norway.",
+      "og_title": "Paint & Fun Norway — Ingrid Amuri Rutherford",
+      "og_description": "Visual artist, graphic designer and art instructor. Original art, prints and creative courses in Son, Vestby, Norway.",
+      "og_type": "website"
+    }
+  },
+  "gallery": {
+    "no": {
+      "title": "Galleri — Ingrid Amuri Rutherford | Original kunst og trykk",
+      "description": "Utforsk Ingrid Amuri Rutherfords kunstgalleri. Originale malerier, akvareller, blandet teknikk og trykk. Bestillingsverk velkommen.",
+      "og_title": "Kunstgalleri — Ingrid Amuri Rutherford",
+      "og_description": "Originale malerier, trykk og blandet teknikk av Ingrid Amuri Rutherford fra Son, Vestby.",
+      "og_type": "website"
+    },
+    "en": {
+      "title": "Gallery — Ingrid Amuri Rutherford | Original Art & Prints",
+      "description": "Explore Ingrid Amuri Rutherford's art gallery. Original paintings, watercolors, mixed media and prints. Commissions welcome.",
+      "og_title": "Art Gallery — Ingrid Amuri Rutherford",
+      "og_description": "Original paintings, prints and mixed media by Ingrid Amuri Rutherford from Son, Vestby, Norway.",
+      "og_type": "website"
+    }
+  },
+  "about": {
+    "no": {
+      "title": "Om kunstneren — Ingrid Amuri Rutherford | Son, Vestby",
+      "description": "Lær mer om Ingrid Amuri Rutherford — visuell kunstner, grafisk designer og instruktør i Son, Vestby. Aktiv i Vestby Kunstforening.",
+      "og_title": "Om Ingrid Amuri Rutherford",
+      "og_description": "Visuell kunstner, grafisk designer og kunstinstruktør basert i Son, Vestby. Aktiv bidragsyter til Vestby Kunstforening.",
+      "og_type": "profile"
+    },
+    "en": {
+      "title": "About the Artist — Ingrid Amuri Rutherford | Son, Vestby",
+      "description": "Learn about Ingrid Amuri Rutherford — visual artist, graphic designer and instructor in Son, Vestby, Norway. Active in Vestby Kunstforening.",
+      "og_title": "About Ingrid Amuri Rutherford",
+      "og_description": "Visual artist, graphic designer and art instructor based in Son, Vestby. Key contributor to Vestby Kunstforening.",
+      "og_type": "profile"
+    }
+  },
+  "courses": {
+    "no": {
+      "title": "Kurs & Arrangementer — Paint & Fun Norway | Son, Vestby",
+      "description": "Kreative kunstkurs og arrangementer med Paint & Fun Norway i Son, Vestby. Malerkurs, tegnekveld, bedriftsarrangementer og private fester.",
+      "og_title": "Kurs & Arrangementer — Paint & Fun Norway",
+      "og_description": "Kreative kunstopplevelser for alle nivåer. Malerkurs, tegnekveld og skreddersydde arrangementer i Son, Vestby.",
+      "og_type": "website"
+    },
+    "en": {
+      "title": "Courses & Events — Paint & Fun Norway | Son, Vestby",
+      "description": "Creative art courses and events with Paint & Fun Norway in Son, Vestby. Painting workshops, drawing evenings, corporate events and private parties.",
+      "og_title": "Courses & Events — Paint & Fun Norway",
+      "og_description": "Creative art experiences for all levels. Painting workshops, drawing evenings and tailored events in Son, Vestby.",
+      "og_type": "website"
+    }
+  },
+  "shop": {
+    "no": {
+      "title": "Butikk — Kjøp original kunst og trykk | Ingrid Amuri Rutherford",
+      "description": "Kjøp original kunst og giclée-trykk av Ingrid Amuri Rutherford. Malerier, akvareller og trykk med levering i Norge.",
+      "og_title": "Kunstbutikk — Ingrid Amuri Rutherford",
+      "og_description": "Original kunst og trykk tilgjengelig for kjøp. Malerier, akvareller og giclée-trykk av Ingrid Amuri Rutherford.",
+      "og_type": "website"
+    },
+    "en": {
+      "title": "Shop — Buy Original Art & Prints | Ingrid Amuri Rutherford",
+      "description": "Buy original art and giclée prints by Ingrid Amuri Rutherford. Paintings, watercolors and prints with shipping to Norway and Europe.",
+      "og_title": "Art Shop — Ingrid Amuri Rutherford",
+      "og_description": "Original art and prints available for purchase. Paintings, watercolors and giclée prints by Ingrid Amuri Rutherford.",
+      "og_type": "website"
+    }
+  },
+  "contact": {
+    "no": {
+      "title": "Kontakt — Ingrid Amuri Rutherford | Paint & Fun Norway",
+      "description": "Ta kontakt med Ingrid Amuri Rutherford for bestillingsverk, kunstkjøp, kurspåmelding eller generelle henvendelser. Basert i Son, Vestby.",
+      "og_title": "Kontakt — Paint & Fun Norway",
+      "og_description": "Ta kontakt for bestillingsverk, kunstkjøp eller kurspåmelding. Basert i Son, Vestby, Norge.",
+      "og_type": "website"
+    },
+    "en": {
+      "title": "Contact — Ingrid Amuri Rutherford | Paint & Fun Norway",
+      "description": "Get in touch with Ingrid Amuri Rutherford for commissions, art purchases, course bookings or general inquiries. Based in Son, Vestby.",
+      "og_title": "Contact — Paint & Fun Norway",
+      "og_description": "Get in touch for commissions, art purchases or course bookings. Based in Son, Vestby, Norway.",
+      "og_type": "website"
+    }
+  }
+}

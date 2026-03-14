@@ -1,0 +1,167 @@
+/*
+ Theme Name:   Crown Art Child — Paint & Fun Norway
+ Theme URI:    https://www.paintandfun.no/
+ Description:  Child theme for Crown Art, customized for Paint & Fun Norway / Ingrid Amuri Rutherford
+ Author:       Charles Rutherford
+ Author URI:   https://www.paintandfun.no/
+ Template:     crown-art
+ Version:      1.0.0
+ Text Domain:  crown-art-child
+*/
+
+/* ── Design Token Overrides ──
+   These align the Crown Art theme with Ingrid's brand identity.
+   The parent theme's Customizer settings take priority for most things,
+   but these CSS custom properties ensure brand consistency. */
+
+:root {
+  --pf-bg: #faf9f7;
+  --pf-text: #1a1a1a;
+  --pf-text-light: #6b6b6b;
+  --pf-accent: #8b6f4e;
+  --pf-accent-light: #c4a882;
+  --pf-border: #e8e4df;
+  --pf-card-bg: #ffffff;
+  --pf-serif: 'Cormorant Garamond', Georgia, serif;
+  --pf-sans: 'Inter', -apple-system, sans-serif;
+}
+
+/* ── Typography ── */
+body {
+  font-family: var(--pf-sans);
+  background-color: var(--pf-bg);
+  color: var(--pf-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6,
+.post_title,
+.sc_title,
+.widget_title {
+  font-family: var(--pf-serif);
+}
+
+/* ── Header / Nav ── */
+.top_panel {
+  background-color: var(--pf-bg);
+}
+
+.sc_layouts_title {
+  font-family: var(--pf-serif);
+}
+
+/* ── Language Switcher ── */
+.pf-lang-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 16px;
+  vertical-align: middle;
+}
+
+.pf-lang-switcher a {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px;
+  border: 2px solid transparent;
+  border-radius: 3px;
+  opacity: 0.6;
+  transition: opacity 0.3s, border-color 0.3s;
+}
+
+.pf-lang-switcher a:hover {
+  opacity: 0.9;
+}
+
+.pf-lang-switcher a.current-lang {
+  opacity: 1;
+  border-color: var(--pf-accent);
+}
+
+.pf-lang-switcher img {
+  width: 24px;
+  height: 16px;
+  display: block;
+}
+
+/* ── Accent Color Overrides ── */
+.sc_button,
+.sc_button_simple,
+.theme_button,
+input[type="submit"],
+button[type="submit"] {
+  background-color: var(--pf-accent) !important;
+  border-color: var(--pf-accent) !important;
+}
+
+.sc_button:hover,
+.sc_button_simple:hover,
+.theme_button:hover,
+input[type="submit"]:hover,
+button[type="submit"]:hover {
+  background-color: var(--pf-accent-light) !important;
+  border-color: var(--pf-accent-light) !important;
+}
+
+a {
+  color: var(--pf-accent);
+}
+
+a:hover {
+  color: var(--pf-accent-light);
+}
+
+/* ── Gallery / Essential Grid ── */
+.eg-ingrid-element-0 {
+  font-family: var(--pf-serif);
+}
+
+/* ── WooCommerce ── */
+.woocommerce .button.alt,
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt {
+  background-color: var(--pf-accent);
+  border-color: var(--pf-accent);
+}
+
+.woocommerce .button.alt:hover,
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover {
+  background-color: var(--pf-accent-light);
+  border-color: var(--pf-accent-light);
+}
+
+.woocommerce span.onsale {
+  background-color: var(--pf-accent);
+}
+
+.woocommerce .price {
+  color: var(--pf-accent) !important;
+}
+
+/* ── Footer ── */
+.footer_wrap {
+  background-color: var(--pf-bg);
+  border-top: 1px solid var(--pf-border);
+}
+
+.footer_wrap .footer_social a {
+  color: var(--pf-text-light);
+}
+
+.footer_wrap .footer_social a:hover {
+  color: var(--pf-accent);
+}
+
+/* ── Misc ── */
+.trx_addons_scroll_to_top {
+  background-color: var(--pf-accent);
+}
+
+.trx_addons_scroll_to_top:hover {
+  background-color: var(--pf-accent-light);
+}

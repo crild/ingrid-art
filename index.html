@@ -3,506 +3,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ingrid Amuri Rutherford — Art</title>
-  <meta name="description" content="Original art by Ingrid Amuri Rutherford. Visual artist, graphic designer and instructor based in Son, Vestby, Norway. Paintings, prints, and commissions.">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap');
-
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-    :root {
-      --bg: #faf9f7;
-      --text: #1a1a1a;
-      --text-light: #6b6b6b;
-      --accent: #8b6f4e;
-      --accent-light: #c4a882;
-      --border: #e8e4df;
-      --card-bg: #ffffff;
-      --hero-overlay: rgba(20, 18, 15, 0.45);
-      --serif: 'Cormorant Garamond', Georgia, serif;
-      --sans: 'Inter', -apple-system, sans-serif;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: var(--sans);
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* ── Navigation ── */
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      padding: 18px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      transition: background 0.3s, box-shadow 0.3s;
-    }
-
-    nav.scrolled {
-      background: rgba(250, 249, 247, 0.95);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 1px 0 var(--border);
-    }
-
-    .nav-logo {
-      font-family: var(--serif);
-      font-size: 1.4rem;
-      font-weight: 300;
-      letter-spacing: 0.05em;
-      color: #fff;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    nav.scrolled .nav-logo { color: var(--text); }
-
-    .nav-links {
-      display: flex;
-      gap: 32px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-size: 0.85rem;
-      font-weight: 400;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.85);
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    nav.scrolled .nav-links a { color: var(--text-light); }
-    .nav-links a:hover { color: var(--accent); }
-
-    .nav-menu-btn {
-      display: none;
-      background: none;
-      border: none;
-      color: #fff;
-      font-size: 1.5rem;
-      cursor: pointer;
-      transition: color 0.3s;
-    }
-
-    nav.scrolled .nav-menu-btn { color: var(--text); }
-
-    /* ── Hero ── */
-    .hero {
-      height: 100vh;
-      min-height: 600px;
-      background: linear-gradient(var(--hero-overlay), var(--hero-overlay)),
-        url('https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=1600&q=80') center/cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #fff;
-    }
-
-    .hero-content {
-      max-width: 700px;
-      padding: 0 24px;
-    }
-
-    .hero h1 {
-      font-family: var(--serif);
-      font-size: clamp(2.5rem, 6vw, 4.5rem);
-      font-weight: 300;
-      letter-spacing: 0.04em;
-      line-height: 1.15;
-      margin-bottom: 16px;
-    }
-
-    .hero p {
-      font-size: 1.05rem;
-      font-weight: 300;
-      opacity: 0.85;
-      margin-bottom: 32px;
-      letter-spacing: 0.02em;
-    }
-
-    .hero-btn {
-      display: inline-block;
-      padding: 14px 40px;
-      border: 1px solid rgba(255,255,255,0.6);
-      color: #fff;
-      font-family: var(--sans);
-      font-size: 0.82rem;
-      font-weight: 400;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      text-decoration: none;
-      transition: all 0.3s;
-    }
-
-    .hero-btn:hover {
-      background: #fff;
-      color: var(--text);
-      border-color: #fff;
-    }
-
-    /* ── Sections ── */
-    section {
-      padding: 100px 40px;
-    }
-
-    .section-title {
-      font-family: var(--serif);
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 300;
-      text-align: center;
-      margin-bottom: 12px;
-      letter-spacing: 0.03em;
-    }
-
-    .section-subtitle {
-      text-align: center;
-      color: var(--text-light);
-      font-size: 0.95rem;
-      font-weight: 300;
-      max-width: 550px;
-      margin: 0 auto 60px;
-    }
-
-    /* ── Gallery Grid ── */
-    .gallery-grid {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 24px;
-    }
-
-    .gallery-item {
-      position: relative;
-      overflow: hidden;
-      border-radius: 4px;
-      cursor: pointer;
-      aspect-ratio: 4/5;
-      background: var(--border);
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.6s ease;
-    }
-
-    .gallery-item:hover img {
-      transform: scale(1.05);
-    }
-
-    .gallery-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(transparent 50%, rgba(0,0,0,0.7));
-      opacity: 0;
-      transition: opacity 0.4s;
-      display: flex;
-      align-items: flex-end;
-      padding: 24px;
-    }
-
-    .gallery-item:hover .gallery-overlay {
-      opacity: 1;
-    }
-
-    .gallery-info h3 {
-      font-family: var(--serif);
-      font-size: 1.3rem;
-      font-weight: 400;
-      color: #fff;
-      margin-bottom: 4px;
-    }
-
-    .gallery-info p {
-      font-size: 0.8rem;
-      color: rgba(255,255,255,0.7);
-    }
-
-    .gallery-info .price {
-      font-size: 0.95rem;
-      color: var(--accent-light);
-      margin-top: 6px;
-      font-weight: 500;
-    }
-
-    /* ── About ── */
-    #about {
-      background: var(--card-bg);
-    }
-
-    .about-content {
-      max-width: 900px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    .about-image {
-      border-radius: 4px;
-      overflow: hidden;
-      aspect-ratio: 3/4;
-      background: var(--border);
-    }
-
-    .about-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .about-text h3 {
-      font-family: var(--serif);
-      font-size: 1.8rem;
-      font-weight: 300;
-      margin-bottom: 20px;
-    }
-
-    .about-text p {
-      color: var(--text-light);
-      font-size: 0.95rem;
-      font-weight: 300;
-      line-height: 1.8;
-      margin-bottom: 16px;
-    }
-
-    .about-text .tag {
-      display: inline-block;
-      padding: 4px 14px;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      font-size: 0.75rem;
-      color: var(--text-light);
-      margin-right: 8px;
-      margin-bottom: 8px;
-    }
-
-    /* ── Contact / Commissions ── */
-    #contact {
-      text-align: center;
-    }
-
-    .contact-links {
-      display: flex;
-      justify-content: center;
-      gap: 24px;
-      flex-wrap: wrap;
-      margin-top: 40px;
-    }
-
-    .contact-link {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 16px 32px;
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      text-decoration: none;
-      color: var(--text);
-      font-size: 0.9rem;
-      transition: all 0.3s;
-    }
-
-    .contact-link:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-    }
-
-    .contact-link svg {
-      width: 20px;
-      height: 20px;
-    }
-
-    /* ── Lightbox ── */
-    .lightbox {
-      display: none;
-      position: fixed;
-      inset: 0;
-      z-index: 200;
-      background: rgba(0,0,0,0.92);
-      align-items: center;
-      justify-content: center;
-      padding: 40px;
-    }
-
-    .lightbox.open { display: flex; }
-
-    .lightbox-close {
-      position: absolute;
-      top: 20px;
-      right: 24px;
-      background: none;
-      border: none;
-      color: rgba(255,255,255,0.7);
-      font-size: 2rem;
-      cursor: pointer;
-      transition: color 0.2s;
-    }
-
-    .lightbox-close:hover { color: #fff; }
-
-    .lightbox-content {
-      max-width: 800px;
-      max-height: 80vh;
-      text-align: center;
-    }
-
-    .lightbox-content img {
-      max-width: 100%;
-      max-height: 70vh;
-      object-fit: contain;
-      border-radius: 4px;
-    }
-
-    .lightbox-info {
-      color: #fff;
-      margin-top: 20px;
-    }
-
-    .lightbox-info h3 {
-      font-family: var(--serif);
-      font-size: 1.5rem;
-      font-weight: 400;
-    }
-
-    .lightbox-info p {
-      color: rgba(255,255,255,0.6);
-      font-size: 0.9rem;
-      margin-top: 6px;
-    }
-
-    .lightbox-info .price {
-      color: var(--accent-light);
-      font-size: 1.1rem;
-      margin-top: 10px;
-      font-weight: 500;
-    }
-
-    .lightbox-info .buy-btn {
-      display: inline-block;
-      margin-top: 16px;
-      padding: 12px 36px;
-      background: var(--accent);
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      font-family: var(--sans);
-      font-size: 0.85rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .lightbox-info .buy-btn:hover { background: var(--accent-light); }
-
-    /* ── Footer ── */
-    footer {
-      text-align: center;
-      padding: 40px;
-      border-top: 1px solid var(--border);
-      color: var(--text-light);
-      font-size: 0.8rem;
-    }
-
-    footer a { color: var(--accent); text-decoration: none; }
-
-    /* ── Mobile ── */
-    @media (max-width: 768px) {
-      nav { padding: 14px 20px; }
-      .nav-links { display: none; }
-      .nav-menu-btn { display: block; }
-
-      .nav-links.mobile-open {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: rgba(250,249,247,0.98);
-        backdrop-filter: blur(10px);
-        padding: 20px;
-        gap: 16px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  <meta name="base-path" content=".">
+  <title>Ingrid Amuri Rutherford — Visual Artist & Instructor | Paint & Fun Norway</title>
+  <meta name="description" content="Original art by Ingrid Amuri Rutherford. Visual artist, graphic designer and instructor based in Son, Vestby, Norway. Paintings, prints, courses, and commissions.">
+  <meta property="og:title" content="Ingrid Amuri Rutherford — Visual Artist & Instructor">
+  <meta property="og:description" content="Visual artist, graphic designer and instructor based in Son, Vestby, Norway. Paintings, prints, courses, and commissions.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=1200&q=80">
+  <meta property="og:url" content="https://ingridart.no/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="nb_NO">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "name": "Paint & Fun Norway",
+        "description": "Creative art experiences and instruction in Son, Vestby, Norway.",
+        "url": "https://www.paintandfun.no/",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Son",
+          "addressRegion": "Vestby",
+          "addressCountry": "NO"
+        },
+        "founder": {
+          "@type": "Person",
+          "name": "Ingrid Amuri Rutherford"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Ingrid Amuri Rutherford",
+        "jobTitle": "Visual Artist & Instructor",
+        "url": "https://ingridart.no/",
+        "sameAs": [
+          "https://www.facebook.com/ingrid.rutherford.10/",
+          "https://www.instagram.com/ingrid_rutherford/"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Son",
+          "addressRegion": "Vestby",
+          "addressCountry": "NO"
+        },
+        "knowsAbout": ["Visual Art", "Graphic Design", "Art Instruction", "Painting"]
       }
-
-      .nav-links.mobile-open a { color: var(--text); }
-
-      section { padding: 60px 20px; }
-
-      .gallery-grid {
-        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-        gap: 16px;
-      }
-
-      .about-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-
-      .lightbox { padding: 20px; }
-    }
-
-    /* ── Animations ── */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
+    ]
+  }
+  </script>
 </head>
 <body>
 
   <!-- Navigation -->
   <nav id="navbar">
-    <a href="#" class="nav-logo">Ingrid Amuri Rutherford</a>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <button class="nav-menu-btn" id="menu-btn" onclick="document.getElementById('nav-links').classList.toggle('mobile-open')">&#9776;</button>
+    <a href="index.html" class="nav-logo">Ingrid Amuri Rutherford</a>
+    <div class="nav-center">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+        <li><a href="about.html" data-i18n="nav.about">About</a></li>
+        <li><a href="courses.html" data-i18n="nav.courses">Courses & Events</a></li>
+        <li><a href="shop.html" data-i18n="nav.shop">Shop</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang="no" title="Norsk"><img src="assets/flags/no.svg" alt="Norsk"></button>
+        <button class="lang-btn" data-lang="en" title="English"><img src="assets/flags/en.svg" alt="English"></button>
+      </div>
+    </div>
+    <button class="nav-menu-btn" id="menu-btn">&#9776;</button>
   </nav>
 
   <!-- Hero -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Ingrid Amuri Rutherford</h1>
-      <p>Visual artist and instructor based in Son, Vestby, Norway</p>
-      <a href="#gallery" class="hero-btn">View Collection</a>
+      <h1 data-i18n="hero.title">Ingrid Amuri Rutherford</h1>
+      <p data-i18n="hero.subtitle">Visual artist and instructor based in Son, Vestby, Norway</p>
+      <a href="gallery.html" class="btn btn-outline" data-i18n="hero.cta">View Collection</a>
     </div>
   </section>
 
-  <!-- Gallery -->
-  <section id="gallery">
-    <h2 class="section-title fade-in">Collection</h2>
-    <p class="section-subtitle fade-in">Each piece is an original work. Prints available on request.</p>
+  <!-- Featured Works -->
+  <section id="featured">
+    <h2 class="section-title fade-in" data-i18n="featured.title">Featured Works</h2>
+    <p class="section-subtitle fade-in" data-i18n="featured.subtitle">A selection of recent works across various media and formats.</p>
     <div class="gallery-grid">
 
       <div class="gallery-item fade-in" onclick="openLightbox(this)">
-        <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=600&q=80" alt="Artwork" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=600&q=80" alt="Morning Light" loading="lazy">
         <div class="gallery-overlay">
           <div class="gallery-info">
             <h3>Morning Light</h3>
@@ -513,7 +104,7 @@
       </div>
 
       <div class="gallery-item fade-in" onclick="openLightbox(this)">
-        <img src="https://images.unsplash.com/photo-1549887534-1541e9326642?w=600&q=80" alt="Artwork" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1549887534-1541e9326642?w=600&q=80" alt="Coastal Reflections" loading="lazy">
         <div class="gallery-overlay">
           <div class="gallery-info">
             <h3>Coastal Reflections</h3>
@@ -524,7 +115,7 @@
       </div>
 
       <div class="gallery-item fade-in" onclick="openLightbox(this)">
-        <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=600&q=80" alt="Artwork" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=600&q=80" alt="Still Waters" loading="lazy">
         <div class="gallery-overlay">
           <div class="gallery-info">
             <h3>Still Waters</h3>
@@ -534,105 +125,72 @@
         </div>
       </div>
 
-      <div class="gallery-item fade-in" onclick="openLightbox(this)">
-        <img src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=600&q=80" alt="Artwork" loading="lazy">
-        <div class="gallery-overlay">
-          <div class="gallery-info">
-            <h3>Abstract Seasons</h3>
-            <p>Acrylic on canvas, 70 x 100 cm</p>
-            <p class="price">NOK 6 000</p>
+    </div>
+  </section>
+
+  <!-- Upcoming Courses Teaser -->
+  <section class="section-alt" id="courses-teaser">
+    <h2 class="section-title fade-in" data-i18n="courses.teaser.title">Upcoming Courses</h2>
+    <p class="section-subtitle fade-in" data-i18n="courses.teaser.subtitle">Creative art experiences with Paint & Fun Norway.</p>
+    <div class="course-grid">
+
+      <div class="course-card fade-in">
+        <div class="course-card-img">
+          <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=600&q=80" alt="Painting Workshop" loading="lazy">
+        </div>
+        <div class="course-card-body">
+          <p class="date">April 12, 2026</p>
+          <h3>Acrylic Painting Workshop</h3>
+          <p>Learn the fundamentals of acrylic painting in a relaxed, creative atmosphere. All materials included.</p>
+          <div class="course-card-footer">
+            <span class="price">NOK 850</span>
+            <span class="spots">6 <span data-i18n="courses.spots">spots left</span></span>
           </div>
         </div>
       </div>
 
-      <div class="gallery-item fade-in" onclick="openLightbox(this)">
-        <img src="https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?w=600&q=80" alt="Artwork" loading="lazy">
-        <div class="gallery-overlay">
-          <div class="gallery-info">
-            <h3>Nordic Bloom</h3>
-            <p>Watercolor, 30 x 40 cm</p>
-            <p class="price">NOK 2 500</p>
-          </div>
+      <div class="course-card fade-in">
+        <div class="course-card-img">
+          <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&q=80" alt="Drawing Evening" loading="lazy">
         </div>
-      </div>
-
-      <div class="gallery-item fade-in" onclick="openLightbox(this)">
-        <img src="https://images.unsplash.com/photo-1482160549825-59d1b23cb208?w=600&q=80" alt="Artwork" loading="lazy">
-        <div class="gallery-overlay">
-          <div class="gallery-info">
-            <h3>Fjord Sunset</h3>
-            <p>Oil on canvas, 60 x 90 cm</p>
-            <p class="price">NOK 5 800</p>
+        <div class="course-card-body">
+          <p class="date">April 26, 2026</p>
+          <h3>Drawing &amp; Wine Evening</h3>
+          <p>A relaxed evening of drawing and socializing. Perfect for beginners and experienced artists alike.</p>
+          <div class="course-card-footer">
+            <span class="price">NOK 650</span>
+            <span class="spots">4 <span data-i18n="courses.spots">spots left</span></span>
           </div>
         </div>
       </div>
 
     </div>
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="courses.html" class="btn btn-secondary btn-sm" data-i18n="courses.teaser.cta">View all courses</a>
+    </div>
   </section>
 
-  <!-- About -->
-  <section id="about">
+  <!-- About Teaser -->
+  <section id="about-teaser">
     <div class="about-content">
       <div class="about-image fade-in">
         <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=600&q=80" alt="Ingrid Rutherford in her studio">
       </div>
       <div class="about-text fade-in">
-        <h3>About the Artist</h3>
-        <p>
-          Ingrid Amuri Rutherford is a visual artist, graphic designer, and art instructor based in Son, Vestby &mdash; south of Oslo, Norway.
-          She runs <a href="https://www.paintandfun.no/" style="color:var(--accent)">Paint &amp; Fun Norway</a>, offering creative art experiences and instruction.
-        </p>
-        <p>
-          An active force in the local art scene, Ingrid is a key contributor to
-          <a href="https://www.vestbykunstforening.no/" style="color:var(--accent)">Vestby Kunstforening</a> (Vestby Art Association),
-          where she helps organize exhibitions, art walks, and community events that bring artists and audiences together.
-        </p>
-        <p>
-          Her own work spans a range of media and scales &mdash; from intimate pieces to large-format paintings.
-          Commissions are welcome. Get in touch to discuss a custom piece.
-        </p>
-        <div style="margin-top: 20px;">
-          <span class="tag">Visual Art</span>
-          <span class="tag">Graphic Design</span>
-          <span class="tag">Art Instruction</span>
-          <span class="tag">Large Format</span>
-          <span class="tag">Commissions</span>
-        </div>
+        <h3 data-i18n="about.teaser.title">About the Artist</h3>
+        <p data-i18n="about.teaser.text">Ingrid Amuri Rutherford is a visual artist, graphic designer and art instructor based in Son, Vestby &mdash; south of Oslo, Norway.</p>
+        <a href="about.html" class="btn btn-secondary btn-sm" data-i18n="about.teaser.cta">Read more</a>
       </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <h2 class="section-title fade-in">Get in Touch</h2>
-    <p class="section-subtitle fade-in">Interested in a piece or want to discuss a commission? Reach out through any of these channels.</p>
-    <div class="contact-links fade-in">
-      <a href="https://www.facebook.com/ingrid.rutherford.10/" target="_blank" class="contact-link">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-        Facebook
-      </a>
-      <a href="https://www.vestbykunstforening.no/author/ingridr/" target="_blank" class="contact-link">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-        Vestby Kunstforening
-      </a>
-      <a href="https://www.instagram.com/ingrid_rutherford/" target="_blank" class="contact-link">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-        Instagram
-      </a>
-      <a href="https://www.paintandfun.no/" target="_blank" class="contact-link">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-        Paint &amp; Fun Norway
-      </a>
-      <a href="mailto:ingrid@example.com" class="contact-link">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-        Email
-      </a>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2026 Ingrid Amuri Rutherford. All rights reserved. Based in Son, Vestby, Norway.</p>
+    <div class="footer-social">
+      <a href="https://www.facebook.com/ingrid.rutherford.10/" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      <a href="https://www.instagram.com/ingrid_rutherford/" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+    </div>
+    <p><span data-i18n="footer.rights">&copy; 2026 Ingrid Amuri Rutherford. All rights reserved.</span> <span data-i18n="footer.location">Based in Son, Vestby, Norway.</span></p>
   </footer>
 
   <!-- Lightbox -->
@@ -644,65 +202,12 @@
         <h3 id="lightbox-title"></h3>
         <p id="lightbox-desc"></p>
         <p class="price" id="lightbox-price"></p>
-        <button class="buy-btn" onclick="inquireAboutPiece()">Inquire About This Piece</button>
+        <button class="btn btn-primary" onclick="inquireAboutPiece()" data-i18n="lightbox.inquire">Inquire About This Piece</button>
       </div>
     </div>
   </div>
 
-  <script>
-    // ── Scroll nav background ──
-    const nav = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 60);
-    });
-
-    // ── Fade-in on scroll ──
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          observer.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.15 });
-
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-    // ── Lightbox ──
-    function openLightbox(item) {
-      const img = item.querySelector('img');
-      const info = item.querySelector('.gallery-info');
-      document.getElementById('lightbox-img').src = img.src.replace('w=600', 'w=1200');
-      document.getElementById('lightbox-title').textContent = info.querySelector('h3').textContent;
-      document.getElementById('lightbox-desc').textContent = info.querySelector('p').textContent;
-      document.getElementById('lightbox-price').textContent = info.querySelector('.price').textContent;
-      document.getElementById('lightbox').classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeLightbox() {
-      document.getElementById('lightbox').classList.remove('open');
-      document.body.style.overflow = '';
-    }
-
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') closeLightbox();
-    });
-
-    function inquireAboutPiece() {
-      const title = document.getElementById('lightbox-title').textContent;
-      const price = document.getElementById('lightbox-price').textContent;
-      const subject = encodeURIComponent('Inquiry about: ' + title);
-      const body = encodeURIComponent('Hi Ingrid,\n\nI am interested in your piece "' + title + '" (' + price + ').\n\nCould you please share more details?\n\nBest regards');
-      window.location.href = 'mailto:ingrid@example.com?subject=' + subject + '&body=' + body;
-    }
-
-    // Close mobile menu on link click
-    document.querySelectorAll('.nav-links a').forEach(a => {
-      a.addEventListener('click', () => {
-        document.getElementById('nav-links').classList.remove('mobile-open');
-      });
-    });
-  </script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
