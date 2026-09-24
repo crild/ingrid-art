@@ -1,0 +1,149 @@
+/* ============================================
+   Paint & Fun Norway - Language Switcher Fix
+   Artist: Ingrid Amuri Rutherford
+   Theme: Crown Art + Polylang
+
+   STATUS: This CSS is currently injected inline into
+   the homepage content (pages 385 and 521).
+   For a permanent solution, paste into:
+   WordPress Admin > Simple CSS or Additional CSS
+   ============================================ */
+
+/* --- Header Widgets Wrap: Position flags inside the header bar --- */
+
+.header_widgets_wrap.widget_area {
+  position: absolute !important;
+  top: 0 !important;
+  right: 20px !important;
+  z-index: 100 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: auto !important;
+  min-height: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  height: 100% !important;
+  pointer-events: none;
+}
+
+.header_widgets_wrap .header_widgets_inner {
+  display: flex !important;
+  align-items: center !important;
+  height: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  pointer-events: auto;
+}
+
+.top_panel {
+  position: relative !important;
+}
+
+.header_widgets_wrap.header_fullwidth {
+  background: none !important;
+  border: none !important;
+}
+
+/* --- Language Switcher: Compact Inline Flags --- */
+
+.widget_polylang {
+  display: inline-flex !important;
+  align-items: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.widget_polylang ul {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+.widget_polylang ul li {
+  display: inline-block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+}
+
+.widget_polylang ul li a {
+  display: inline-block !important;
+  line-height: 1 !important;
+  text-decoration: none !important;
+  padding: 2px !important;
+  border-radius: 2px !important;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+  font-size: 0 !important;
+  color: transparent !important;
+}
+
+.widget_polylang ul li a:hover,
+.widget_polylang ul li.current-lang a {
+  opacity: 1;
+}
+
+.widget_polylang img,
+.widget_polylang .pll-flag {
+  width: 20px !important;
+  height: 14px !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  border: 1px solid rgba(0,0,0,0.1) !important;
+  border-radius: 2px !important;
+}
+
+/* --- Language switch menu items (EN/NO in nav) --- */
+
+.menu-item-552 > a,
+.menu-item-553 > a {
+  opacity: 0.5 !important;
+  font-size: 12px !important;
+  letter-spacing: 0.05em !important;
+  border-left: 1px solid #e8e4df !important;
+  margin-left: 8px !important;
+  padding-left: 16px !important;
+}
+
+.menu-item-552 > a:hover,
+.menu-item-553 > a:hover {
+  opacity: 1 !important;
+  color: #e6b8c4 !important;
+}
+
+/* --- Mobile adjustments --- */
+
+@media screen and (max-width: 768px) {
+  .header_widgets_wrap.widget_area {
+    right: 10px !important;
+    top: 2px !important;
+  }
+
+  .widget_polylang img,
+  .widget_polylang .pll-flag {
+    width: 18px !important;
+    height: 13px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header_widgets_wrap.widget_area {
+    right: 8px !important;
+    top: 4px !important;
+  }
+
+  .widget_polylang img,
+  .widget_polylang .pll-flag {
+    width: 16px !important;
+    height: 11px !important;
+  }
+}

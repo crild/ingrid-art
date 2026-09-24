@@ -1,0 +1,493 @@
+/* =====================================================
+   Paint & Fun Norway — Complete Custom CSS
+   Artist: Ingrid Amuri Rutherford
+   Theme: Crown Art (parent)
+   Accent: #e6b8c4 (pale pink)
+   Last updated: 2026-03-15
+
+   PASTE THIS ENTIRE FILE INTO:
+   WordPress Admin > Appearance > Simple CSS
+   ===================================================== */
+
+
+/* ================================================
+   SECTION 1: HEADER
+   ================================================ */
+
+.top_panel {
+  background: #fff !important;
+  border-bottom: 1px solid #e8e4df !important;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04) !important;
+}
+
+.top_panel_navi {
+  padding: 0 !important;
+  min-height: 0 !important;
+}
+
+.top_panel_navi .content_wrap {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 0 30px !important;
+}
+
+.top_panel_navi .content_wrap > .columns_wrap {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+  padding: 18px 0 12px !important;
+}
+
+/* Left column: artist identity */
+.top_panel_navi .sc_layouts_column.column-1_4 {
+  flex: 0 0 auto !important;
+  width: auto !important;
+  max-width: 50% !important;
+  text-align: left !important;
+}
+
+.sc_layouts_logo .logo_text {
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif !important;
+  font-size: 1.65rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.02em !important;
+  color: #2c2c2c !important;
+  line-height: 1.2 !important;
+}
+
+.sc_layouts_logo .logo_text:hover {
+  color: #e6b8c4 !important;
+}
+
+.sc_layouts_logo .logo_slogan {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: 0.78rem !important;
+  font-weight: 300 !important;
+  color: #8a8a8a !important;
+  letter-spacing: 0.06em !important;
+  text-transform: none !important;
+  margin-top: 2px !important;
+  display: block !important;
+}
+
+/* Right column: Paint & Fun branding + nav */
+.top_panel_navi .sc_layouts_column.column-3_4 {
+  flex: 1 1 auto !important;
+  width: auto !important;
+  max-width: 60% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-end !important;
+  justify-content: center !important;
+  text-align: right !important;
+  position: relative !important;
+}
+
+.top_panel_navi .sc_layouts_column.column-3_4::before {
+  content: 'Paint & Fun Norway' !important;
+  display: block !important;
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: 1.25rem !important;
+  font-weight: 400 !important;
+  color: #e6b8c4 !important;
+  letter-spacing: 0.04em !important;
+  text-align: right !important;
+  width: 100% !important;
+  order: 1 !important;
+  margin-bottom: 0 !important;
+  line-height: 1.3 !important;
+}
+
+.top_panel_navi .sc_layouts_column.column-3_4::after {
+  content: 'Art Experiences & Instruction' !important;
+  display: block !important;
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: 0.72rem !important;
+  font-weight: 300 !important;
+  color: #8a8a8a !important;
+  letter-spacing: 0.06em !important;
+  text-align: right !important;
+  width: 100% !important;
+  margin-bottom: 6px !important;
+  order: 2 !important;
+}
+
+.top_panel_navi .sc_layouts_column.column-3_4 .sc_layouts_item {
+  order: 3 !important;
+  width: 100% !important;
+  display: flex !important;
+  justify-content: flex-end !important;
+}
+
+/* Hide search icon */
+.header_search, .search_wrap, .search_icon {
+  display: none !important;
+}
+
+
+/* ================================================
+   SECTION 2: NAVIGATION
+   ================================================ */
+
+.sc_layouts_menu_nav, .menu_main_nav {
+  display: flex !important;
+  justify-content: flex-end !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.sc_layouts_menu_nav > li > a, .menu_main_nav > li > a {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: 0.85rem !important;
+  font-weight: 400 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.14em !important;
+  color: #4a4a4a !important;
+  padding: 8px 14px !important;
+  transition: color 0.25s ease !important;
+  display: inline-block !important;
+  text-decoration: none !important;
+}
+
+.sc_layouts_menu_nav > li > a:hover, .menu_main_nav > li > a:hover,
+.sc_layouts_menu_nav > li.current-menu-item > a, .menu_main_nav > li.current-menu-item > a {
+  color: #e6b8c4 !important;
+}
+
+.sc_layouts_menu_nav > li > a::after {
+  content: '' !important;
+  display: block !important;
+  width: 0 !important;
+  height: 1px !important;
+  background: #e6b8c4 !important;
+  transition: width 0.3s ease !important;
+  margin: 2px auto 0 !important;
+}
+
+.sc_layouts_menu_nav > li > a:hover::after,
+.sc_layouts_menu_nav > li.current-menu-item > a::after {
+  width: 100% !important;
+}
+
+/* Language switcher */
+.widget_polylang { display: inline-flex !important; align-items: center !important; }
+.widget_polylang ul { list-style: none !important; margin: 0 !important; padding: 0 !important; display: flex !important; gap: 6px !important; }
+.widget_polylang li { margin: 0 !important; }
+.widget_polylang img { width: 20px !important; height: auto !important; border-radius: 2px !important; opacity: 0.7 !important; transition: opacity 0.2s ease !important; }
+.widget_polylang img:hover { opacity: 1 !important; }
+
+
+/* ================================================
+   SECTION 3: CONTENT CENTERING & MARGINS
+   ================================================ */
+
+.page_content_wrap {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.page_content_wrap > .content_wrap, .page_content_wrap .content_wrap {
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+}
+
+.post_content, .entry-content {
+  max-width: 100% !important;
+  overflow: visible !important;
+}
+
+.sidebar { display: none !important; }
+.content_wrap .content { width: 100% !important; float: none !important; }
+
+/* Page title area */
+.sc_layouts_title {
+  padding: 100px 0 20px !important;
+  min-height: 0 !important;
+  background: #fff !important;
+}
+
+.sc_layouts_title_caption {
+  font-size: 2rem !important;
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 300 !important;
+}
+
+.breadcrumbs { font-size: 0.78rem !important; color: #aaa !important; padding: 8px 0 !important; }
+.breadcrumbs a { color: #aaa !important; }
+.breadcrumbs a:hover { color: #e6b8c4 !important; }
+
+
+/* ================================================
+   SECTION 4: TYPOGRAPHY
+   ================================================ */
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.75 !important;
+  color: #3a3a3a !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif !important;
+  font-weight: 300 !important;
+  color: #2c2c2c !important;
+}
+
+h1 { font-size: 2.4rem !important; }
+h2 { font-size: 2rem !important; }
+h3 { font-size: 1.6rem !important; }
+
+a { color: #e6b8c4 !important; text-decoration: none !important; transition: color 0.25s ease !important; }
+a:hover { color: #d4929f !important; }
+
+body.custom-background { background-color: #faf8f6 !important; background-image: none !important; }
+
+
+/* ================================================
+   SECTION 5: BUTTONS & FORMS
+   ================================================ */
+
+.sc_button, input[type="submit"], .wpcf7-submit {
+  background-color: #e6b8c4 !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 4px !important;
+  padding: 12px 36px !important;
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: 0.82rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  cursor: pointer !important;
+  transition: background-color 0.25s ease, transform 0.15s ease !important;
+}
+
+.sc_button:hover, input[type="submit"]:hover, .wpcf7-submit:hover {
+  background-color: #d4929f !important;
+  transform: translateY(-1px) !important;
+}
+
+.wpcf7 input[type="text"], .wpcf7 input[type="email"], .wpcf7 textarea {
+  width: 100% !important;
+  padding: 12px 16px !important;
+  border: 1px solid #e0ddd8 !important;
+  border-radius: 4px !important;
+  font-size: 0.95rem !important;
+  font-family: inherit !important;
+  transition: border-color 0.25s ease !important;
+  background: #fafafa !important;
+}
+
+.wpcf7 input:focus, .wpcf7 textarea:focus {
+  border-color: #e6b8c4 !important;
+  outline: none !important;
+  background: #fff !important;
+  box-shadow: 0 0 0 3px rgba(230, 184, 196, 0.1) !important;
+}
+
+.wpcf7 label {
+  font-size: 0.85rem !important;
+  color: #6b6b6b !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+}
+
+
+/* ================================================
+   SECTION 6: GALLERY & CARDS
+   ================================================ */
+
+.entry-content div[style*="display:grid"], .post_content div[style*="display:grid"] {
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.entry-content div[style*="border-radius:4px; overflow:hidden"],
+.post_content div[style*="border-radius:4px; overflow:hidden"] {
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.entry-content div[style*="border-radius:4px; overflow:hidden"]:hover,
+.post_content div[style*="border-radius:4px; overflow:hidden"]:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12) !important;
+}
+
+.entry-content img, .post_content img { border-radius: 4px !important; }
+
+/* About page tags hover */
+.entry-content span[style*="border-radius:20px"]:hover {
+  border-color: #e6b8c4 !important;
+  color: #e6b8c4 !important;
+}
+
+/* CV list items hover */
+.entry-content ul[style*="list-style:none"] li:hover {
+  background-color: rgba(230, 184, 196, 0.06) !important;
+}
+
+/* Press links hover */
+.entry-content a[style*="border:1px solid #e8e4df"]:hover {
+  border-color: #e6b8c4 !important;
+  box-shadow: 0 4px 12px rgba(230, 184, 196, 0.15) !important;
+}
+
+
+/* ================================================
+   SECTION 7: FOOTER
+   ================================================ */
+
+.footer_wrap, .copyright_wrap {
+  background: #2c2c2c !important;
+  color: #b0b0b0 !important;
+  padding: 30px 0 !important;
+}
+.footer_wrap a, .copyright_wrap a { color: #e6b8c4 !important; }
+.footer_wrap a:hover, .copyright_wrap a:hover { color: #fff !important; }
+.copyright_wrap .content_wrap { max-width: 1200px !important; margin: 0 auto !important; text-align: center !important; font-size: 0.8rem !important; }
+
+
+/* ================================================
+   SECTION 8: CLEANUP
+   ================================================ */
+
+#rev_slider_2_1, .rev_slider_wrapper { display: none !important; }
+html { scroll-behavior: smooth !important; }
+*, *::before, *::after { box-sizing: border-box !important; }
+::selection { background: #e6b8c4 !important; color: #fff !important; }
+::-webkit-scrollbar { width: 8px !important; }
+::-webkit-scrollbar-track { background: #faf8f6 !important; }
+::-webkit-scrollbar-thumb { background: #d4c5c9 !important; border-radius: 4px !important; }
+::-webkit-scrollbar-thumb:hover { background: #e6b8c4 !important; }
+.entry-content iframe, .post_content iframe { border-radius: 4px !important; border: 1px solid #e8e4df !important; }
+
+@media print {
+  .top_panel, .footer_wrap, .copyright_wrap, .breadcrumbs { display: none !important; }
+  body.custom-background { background: #fff !important; }
+}
+
+
+/* ================================================
+   SECTION 9: TABLET (max-width: 768px)
+   ================================================ */
+@media screen and (max-width: 768px) {
+
+  html, body { overflow-x: hidden !important; }
+  .page_wrap, .page_content_wrap, .content_wrap { overflow-x: hidden !important; max-width: 100vw !important; }
+  html { -webkit-overflow-scrolling: touch; -webkit-text-size-adjust: 100%; }
+
+  /* Header */
+  .top_panel .sc_layouts_logo .logo_text { font-size: 1.1rem !important; }
+  .top_panel .sc_layouts_logo .logo_slogan { font-size: 0.65rem !important; line-height: 1.1 !important; }
+  .sc_layouts_menu_nav > li > a { font-size: 13px !important; padding: 8px 10px !important; }
+  .top_panel_navi { padding: 4px 0 !important; }
+  .top_panel_navi .sc_layouts_column.column-3_4::before { font-size: 1rem !important; }
+  .top_panel_navi .sc_layouts_column.column-3_4::after { font-size: 0.6rem !important; }
+
+  .page_content_wrap { padding-top: 10px !important; }
+
+  /* Stack two-column grids */
+  .pf-two-col, .pf-contact-grid { display: grid !important; grid-template-columns: 1fr !important; gap: 24px !important; }
+
+  /* Gallery: 2 columns */
+  .pf-gallery-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 16px !important; }
+
+  /* Typography */
+  h1, .page_title { font-size: 1.8rem !important; }
+  h2 { font-size: 1.6rem !important; }
+  h3 { font-size: 1.3rem !important; }
+  .post_content h2[style*="font-size:2.5rem"], .entry-content h2[style*="font-size:2.5rem"] { font-size: 2rem !important; }
+
+  /* Spacing */
+  .post_content div[style*="padding:60px 20px"], .entry-content div[style*="padding:60px 20px"] { padding: 32px 16px !important; }
+  .post_content div[style*="padding:80px 40px"], .entry-content div[style*="padding:80px 40px"] { padding: 40px 16px !important; }
+  .post_content div[style*="padding:40px 20px"], .entry-content div[style*="padding:40px 20px"] { padding: 24px 16px !important; }
+
+  .post_content img, .entry-content img { max-width: 100% !important; height: auto !important; }
+  .pf-gallery-grid img { height: auto !important; aspect-ratio: 4/3 !important; object-fit: cover !important; }
+
+  /* Touch-friendly buttons */
+  .post_content a[style*="border:1px solid #e6b8c4"], .entry-content a[style*="border:1px solid #e6b8c4"],
+  .post_content a[style*="background:#e6b8c4"], .entry-content a[style*="background:#e6b8c4"] {
+    padding: 14px 28px !important; font-size: 0.85rem !important; min-height: 44px !important;
+  }
+
+  /* CF7 form */
+  .wpcf7-form-control.wpcf7-text, .wpcf7-form-control.wpcf7-email, .wpcf7-form-control.wpcf7-textarea {
+    width: 100% !important; font-size: 16px !important; padding: 12px !important;
+  }
+  .wpcf7-form-control.wpcf7-submit {
+    width: 100% !important; min-height: 48px !important; font-size: 16px !important;
+    background-color: #e6b8c4 !important; color: #fff !important; border: none !important; border-radius: 4px !important;
+  }
+
+  /* CV list wrap */
+  .post_content li[style*="display:flex"], .entry-content li[style*="display:flex"] { flex-wrap: wrap !important; }
+  .post_content li[style*="display:flex"] span[style*="min-width:180px"], .entry-content li[style*="display:flex"] span[style*="min-width:180px"] { min-width: auto !important; width: 100% !important; }
+
+  .widget_polylang { margin-left: 8px !important; }
+  .widget_polylang img { width: 20px !important; height: 14px !important; }
+
+  .post_content iframe, .entry-content iframe { width: 100% !important; min-height: 180px !important; }
+}
+
+
+/* ================================================
+   SECTION 10: MOBILE PHONE (max-width: 480px)
+   ================================================ */
+@media screen and (max-width: 480px) {
+
+  .top_panel .sc_layouts_logo .logo_text { font-size: 0.95rem !important; }
+  .top_panel .sc_layouts_logo .logo_slogan { display: none !important; }
+  .sc_layouts_menu_nav > li > a { font-size: 12px !important; padding: 6px 6px !important; letter-spacing: 0.05em !important; }
+  .top_panel_navi .sc_layouts_column.column-3_4::before { font-size: 0.85rem !important; }
+  .top_panel_navi .sc_layouts_column.column-3_4::after { display: none !important; }
+
+  h1, .page_title { font-size: 1.5rem !important; }
+  h2 { font-size: 1.35rem !important; }
+  h3 { font-size: 1.15rem !important; }
+  body, .post_content, .entry-content { font-size: 15px !important; line-height: 1.7 !important; }
+  .post_content h2[style*="font-size:2.5rem"], .entry-content h2[style*="font-size:2.5rem"] { font-size: 1.6rem !important; }
+
+  .pf-gallery-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
+
+  .post_content div[style*="padding:60px"], .entry-content div[style*="padding:60px"] { padding: 24px 12px !important; }
+  .post_content div[style*="padding:80px 40px"], .entry-content div[style*="padding:80px 40px"] { padding: 28px 12px !important; }
+  .post_content div[style*="padding:40px"], .entry-content div[style*="padding:40px"] { padding: 20px 12px !important; }
+
+  .pf-two-col, .pf-contact-grid { gap: 20px !important; }
+
+  .post_content a[style*="border:1px solid #e6b8c4"], .entry-content a[style*="border:1px solid #e6b8c4"],
+  .post_content a[style*="background:#e6b8c4"], .entry-content a[style*="background:#e6b8c4"] {
+    display: block !important; text-align: center !important; width: 100% !important; max-width: 300px !important; margin-left: auto !important; margin-right: auto !important;
+  }
+
+  .wpcf7-form-control.wpcf7-submit { width: 100% !important; min-height: 50px !important; }
+
+  .post_content li[style*="display:flex"], .entry-content li[style*="display:flex"] { flex-direction: column !important; gap: 4px !important; }
+  .post_content li[style*="display:flex"] span[style*="min-width"], .entry-content li[style*="display:flex"] span[style*="min-width"] { min-width: auto !important; }
+
+  .post_content div[style*="max-width:1200px"], .entry-content div[style*="max-width:1200px"],
+  .post_content div[style*="max-width:900px"], .entry-content div[style*="max-width:900px"],
+  .post_content div[style*="max-width:800px"], .entry-content div[style*="max-width:800px"],
+  .post_content div[style*="max-width:700px"], .entry-content div[style*="max-width:700px"] {
+    padding-left: 12px !important; padding-right: 12px !important;
+  }
+}
+
+
+/* ================================================
+   SECTION 11: VERY SMALL PHONES (max-width: 360px)
+   ================================================ */
+@media screen and (max-width: 360px) {
+  .top_panel .sc_layouts_logo .logo_text { font-size: 0.85rem !important; }
+  .sc_layouts_menu_nav > li > a { font-size: 11px !important; padding: 6px 4px !important; }
+  body, .post_content, .entry-content { font-size: 14px !important; }
+  .post_content h2[style*="font-size:2.5rem"], .entry-content h2[style*="font-size:2.5rem"] { font-size: 1.4rem !important; }
+}

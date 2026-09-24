@@ -133,7 +133,6 @@ function pf_schema_org_data() {
                 ),
                 'sameAs' => array(
                     'https://www.facebook.com/ingrid.rutherford.10/',
-                    'https://www.instagram.com/ingrid_rutherford/',
                     'https://www.vestbykunstforening.no/author/ingridr/',
                 ),
             ),
@@ -145,7 +144,6 @@ function pf_schema_org_data() {
                 'url'    => 'https://www.paintandfun.no/',
                 'sameAs' => array(
                     'https://www.facebook.com/ingrid.rutherford.10/',
-                    'https://www.instagram.com/ingrid_rutherford/',
                 ),
                 'worksFor' => array(
                     '@id' => 'https://www.paintandfun.no/#business',

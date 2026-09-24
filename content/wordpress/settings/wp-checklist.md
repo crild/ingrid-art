@@ -156,7 +156,7 @@ Configure tax rates in WooCommerce > Settings > Tax if applicable.
    - SEO Title
    - Meta Description
    - Open Graph image (upload a representative image)
-3. **Social profiles**: Add Facebook and Instagram URLs
+3. **Social profiles**: Add Facebook URL (no Instagram)
 4. **Sitemaps**: Enable XML sitemaps (auto-generated)
 5. **Breadcrumbs**: Enable if desired
 
@@ -170,7 +170,7 @@ Configure tax rates in WooCommerce > Settings > Tax if applicable.
 4. **Header**: Configure logo, enable social icons, add language switcher
 5. **Footer**:
    - Copyright text: `© 2026 Ingrid Amuri Rutherford`
-   - Add social links: Facebook, Instagram
+   - Add social links: Facebook (no Instagram)
    - Remove any Crown Art branding
 6. **Blog**: Configure if Ingrid wants to write blog posts (art process, exhibition news)
 
@@ -206,7 +206,7 @@ If using Essential Grid for the gallery page instead of WooCommerce product grid
 - [ ] Contact form sends email correctly
 - [ ] Shop products display with images and prices
 - [ ] Mobile responsive — test on phone
-- [ ] Social links work (Facebook, Instagram)
+- [ ] Social links work (Facebook)
 - [ ] No demo/placeholder content remains
 - [ ] Google Search Console: submit sitemap
 - [ ] Google Business Profile: update website URL
